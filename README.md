@@ -6,28 +6,28 @@ CircleImageView is a component which display circle image with customization opt
 
 Release notes
 --------
-#####1.2.0
+##### 1.2.0
 * Implemented animation for pressed event
 * Added new attribute pressedRingWidth, pressedRingColor
 
-#####1.1.4
+##### 1.1.4
 * Fix bug (issue #3 on github)
 
-#####1.1.3
+##### 1.1.3
 * Improve component performance
 * Optimization of image drawing
 
-#####1.1.2
+##### 1.1.2
 * Support padding parameters (paddingLeft, paddingTop, paddingRight, paddingBottom).
 
-#####1.1.1
+##### 1.1.1
 * Fix bug (issue #1 on github).
 
-#####1.1.0
+##### 1.1.0
 * shows shadow for image;
 * shows shadow for border.
 
-#####1.0.0
+##### 1.0.0
 * change background for *.png images;
 * shows images;
 * realize click listener for this component;
@@ -53,7 +53,7 @@ or Maven:
 </dependency>
 ```
 
-###XML
+### XML
 ```xml
     <com.alexzh.circleimageview.CircleImageView
         android:id="@+id/imageView"
@@ -76,7 +76,7 @@ or Maven:
 
 You may use the following properties in your XML to customize your CircularImageView.
 
-#####Properties:
+##### Properties:
 
 * `app:view_backgroundColor`    (color)       
 * `app:view_borderColor`        (color)
@@ -87,7 +87,7 @@ You may use the following properties in your XML to customize your CircularImage
 * `app:view_shadowDy`           (dimension)
 * `app:view_shadowColor`        (color)
 
-###JAVA
+### JAVA
 
 * `setOnItemSelectedClickListener(ItemSelectedListener listener)` - let's handle onSelected(View view) and onUnselected(View view)
 
