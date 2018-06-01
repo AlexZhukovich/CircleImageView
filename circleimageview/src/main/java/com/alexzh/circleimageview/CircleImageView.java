@@ -62,7 +62,7 @@ public class CircleImageView extends ImageView {
     private int mCenterY;
     private int mRadius;
 
-    private ItemSelectedListener mListener;
+    private ItemSelectedListener mSelectedListener;
     private boolean mIsSelectedState;
 
     private int mBackgroundColor;
@@ -133,7 +133,7 @@ public class CircleImageView extends ImageView {
     }
 
     public void setOnItemSelectedClickListener(ItemSelectedListener listener) {
-        this.mListener = listener;
+        this.mSelectedListener = listener;
     }
 
     public void setBorderWidth(int borderWidth) {
@@ -427,10 +427,10 @@ public class CircleImageView extends ImageView {
     private void hidePressedRing(int currentPressedRingWidth) {
         mPressedAnimator.setFloatValues(currentPressedRingWidth, 0f);
         mPressedAnimator.start();
-        if (mIsSelectedState) {
-            mListener.onSelected(this);
-        } else {
-            mListener.onUnselected(this);
+        if (mIsSelectedState && mSelectedListener != null) {
+            mSelectedListener.onSelected(this);
+        } else if (!mIsSelectedState && mSelectedListener != null) {
+            mSelectedListener.onUnselected(this);
         }
     }
 }
